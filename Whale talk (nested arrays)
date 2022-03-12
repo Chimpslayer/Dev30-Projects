@@ -1,0 +1,17 @@
+let input = 'i like hotdogs, plums, pears and pumice stones';
+const vowels = ['a','e', 'i', 'o', 'u'];
+let resultsArray = [];
+for (let i = 0; i < input.length; i++) {
+        const letter = input[i]
+        if (letter === 'e' || letter === 'u')
+            resultsArray.push(letter)
+        
+    for (let j = 0; j < vowels.length; j++) {
+        const aeiou = vowels[j]
+        if (aeiou === letter) {
+            resultsArray.push(aeiou);
+        }   
+    }
+}
+var resultString = (resultsArray.join('').toUpperCase());
+console.log(resultString);
